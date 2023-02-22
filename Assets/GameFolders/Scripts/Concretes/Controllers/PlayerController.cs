@@ -14,7 +14,7 @@ namespace Project3.Controllers
         [SerializeField] float _moveSpeed;
         [SerializeField] float _turnSpeed;
         [SerializeField] Transform _turnTransform;
-
+        [SerializeField] WeaponController _currentWeaponController;
         CharacterAnimation _animation;
        
         IInputReader _input;
@@ -40,6 +40,11 @@ namespace Project3.Controllers
             _rotation = _input.Rotation;
             _xRotator.RotationAction(_rotation.x, _turnSpeed);
             _yRotator.RotationAction(_rotation.y, _turnSpeed);
+            if (_input.IsAttackButtonPress)
+            {
+                _currentWeaponController.Attack();
+            }
+           
         }
         private void FixedUpdate()
         {
