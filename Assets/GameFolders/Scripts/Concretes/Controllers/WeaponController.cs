@@ -26,7 +26,7 @@ namespace Project3.Controllers
         {
             if (!_canFire) return;
 
-            Ray ray = _camera.ViewportPointToRay(Vector3.one / 2);
+            Ray ray = _camera.ViewportPointToRay(Vector3.one / 2f);
 
             if (Physics.Raycast(ray, out RaycastHit hit, _distance, _layerMask))
             {

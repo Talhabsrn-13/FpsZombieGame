@@ -11,6 +11,9 @@ namespace Project3.Inputs
         public Vector3 Direction { get; private set; }
         public Vector2 Rotation { get; private set; }
         public bool  IsAttackButtonPress { get; private set; }
+
+
+
         public void OnMove(InputAction.CallbackContext context)
         {
             Vector2 oldDirection = context.ReadValue<Vector2>();
