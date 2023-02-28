@@ -6,7 +6,57 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ch10_body
+    second: {instanceID: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ch10_body1
+    second: {instanceID: 0}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch10_1001_Diffuse
+    second: {fileID: 2800000, guid: 7292d8235b44f0947a84ac82b2cf2937, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch10_1001_Glossiness
+    second: {fileID: 2800000, guid: f05009e1c41562646a293ca684721b7a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch10_1001_Normal
+    second: {fileID: 2800000, guid: 50b6a9d00673c944b9e330ba247111bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch10_1001_Specular
+    second: {fileID: 2800000, guid: fa8858ab54dbe414a9e6e0e47578559f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch10_1002_Diffuse
+    second: {fileID: 2800000, guid: 8b2aaf16466cdb94aa0bc20789f8ca02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch10_1002_Glossiness
+    second: {fileID: 2800000, guid: c613a026183b23c45a1b36ed47d65156, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch10_1002_Normal
+    second: {fileID: 2800000, guid: 8e5e85911fb094e46894c2d1da187ca1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch10_1002_Specular
+    second: {fileID: 2800000, guid: 7b0fcd5237956264fb21db7ca3a46a94, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
