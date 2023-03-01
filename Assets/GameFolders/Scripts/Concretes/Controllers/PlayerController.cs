@@ -1,3 +1,4 @@
+using Project3.Abstract.Controller;
 using Project3.Abstract.Inputs;
 using Project3.Abstract.Movements;
 using Project3.Animations;
@@ -8,7 +9,7 @@ using UnityEngine;
 
 namespace Project3.Controllers
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour, IEntityController
     {
         [Header("Movement Informations")]
         [SerializeField] float _moveSpeed;

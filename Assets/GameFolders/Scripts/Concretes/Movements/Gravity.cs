@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Project3.Movements
 {
+    [RequireComponent(typeof(CharacterController))]
     public class Gravity : MonoBehaviour
     {
         [SerializeField] CharacterController _characterController;

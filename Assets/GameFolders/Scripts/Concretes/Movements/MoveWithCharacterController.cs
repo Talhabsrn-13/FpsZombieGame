@@ -1,3 +1,4 @@
+using Project3.Abstract.Controller;
 using Project3.Abstract.Movements;
 using Project3.Controllers;
 using System.Collections;
@@ -9,9 +10,9 @@ namespace Project3.Movements
     public class MoveWithCharacterController : IMover
     {
         CharacterController _characterController;
-        public MoveWithCharacterController(PlayerController player)
+        public MoveWithCharacterController(IEntityController entityController)
         {
-            _characterController = player.GetComponent<CharacterController>();
+            _characterController = entityController.transform.GetComponent<CharacterController>();
         }
 
 

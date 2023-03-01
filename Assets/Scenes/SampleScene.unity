@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 48.4
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -122,24 +122,12 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
---- !u!1 &567284990 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1309564829364355791, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
-  m_PrefabInstance: {fileID: 4786323684208801970}
+  m_NavMeshData: {fileID: 23800000, guid: 7ac1be3c626f23046ba4fddbf80af499, type: 2}
+--- !u!4 &357059849 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 750686896356998202, guid: 11366d2050515e348865ea5fc1707817, type: 3}
+  m_PrefabInstance: {fileID: 750686896593302810}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &567284991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567284990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61228b4f9dd42c74c9789dc9dd8e537c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 7741981331281410049, guid: fd1f6bffd10f29e468212014f3cedce5, type: 3}
@@ -455,6 +443,10 @@ PrefabInstance:
       propertyPath: Damping.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8740102415876524994, guid: 11366d2050515e348865ea5fc1707817, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11366d2050515e348865ea5fc1707817, type: 3}
 --- !u!1001 &4786323684208801970
@@ -464,6 +456,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 567284991, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
+      propertyPath: _playerPrefab
+      value: 
+      objectReference: {fileID: 357059849}
+    - target: {fileID: 567284993, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
+      propertyPath: m_Speed
+      value: 8.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 567284993, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2.31
+      objectReference: {fileID: 0}
     - target: {fileID: 1309564829364355791, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -478,15 +482,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394271026023660377, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.439
       objectReference: {fileID: 0}
     - target: {fileID: 2394271026023660377, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.342
       objectReference: {fileID: 0}
     - target: {fileID: 2394271026023660377, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.719
       objectReference: {fileID: 0}
     - target: {fileID: 2394271026023660377, guid: 8362851f13ae68245bf33bb7f08367f9, type: 3}
       propertyPath: m_LocalRotation.w
