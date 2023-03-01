@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 namespace Project3.Movements
 {
-    public class MoveWithNavMesh : IMover
+    public class MoveWithNavMesh :MonoBehaviour, IMover
     {
         NavMeshAgent _navMeshAgent;
         public MoveWithNavMesh(IEntityController entityController)

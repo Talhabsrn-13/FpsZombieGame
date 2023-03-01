@@ -1,3 +1,4 @@
+using Project3.Abstract.Controller;
 using Project3.Controllers;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,9 +10,9 @@ namespace Project3.Animations
     {
         Animator _animator;
 
-        public CharacterAnimation(PlayerController _entity)
+        public CharacterAnimation(IEntityController entity)
         {
-            _animator = _entity.GetComponentInChildren<Animator>();
+            _animator = entity.transform.GetComponentInChildren<Animator>();
         }
 
         public void MoveAnimation(float moveSpeed)
