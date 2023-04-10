@@ -10,8 +10,7 @@ namespace Project3.Controllers
     public class WeaponController : MonoBehaviour
     {
 
-        [SerializeField] bool _canFire;
-        
+        [SerializeField] bool _canFire;    
         [SerializeField] Transform _transformObject;
         [SerializeField] AttackSO _attackSO;
       
@@ -23,7 +22,7 @@ namespace Project3.Controllers
 
         private void Awake()
         {
-            _attackType = new RangeAttackType(_transformObject, _attackSO);
+            _attackType = _attackSO.GetAttackType(_transformObject);
         }
         void Update()
         {

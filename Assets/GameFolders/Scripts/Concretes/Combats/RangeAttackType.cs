@@ -29,12 +29,6 @@ namespace Project3.Combats
                 }
             }
         }
-        ////  Debug.Log(hit.collider.gameObject.name);
-        //IHealth health = hit.collider.GetComponent<IHealth>();
-        //if (health != null)
-        //{
-        //    health.TakeDamage(_damage);
-        //}
     }
 
 }
