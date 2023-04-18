@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7bff60f03463345b96e8d28f0a3477, type: 3}
   m_Name: RangeAttackWeapon1
   m_EditorClassIdentifier: 
+  _attackType: 0
   _floatValue: 100
   _damage: 10
   _layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   _attackMaxDelay: 0.25
+  _animatorOverride: {fileID: 22100000, guid: a63d1eb4029540f4da65099d54d76686, type: 2}

@@ -21,5 +21,10 @@ namespace Project3.Animations
 
             _animator.SetFloat("MoveSpeed", moveSpeed, 0.1f, Time.deltaTime);
         }
+
+        public void AttackAnimation(bool canAttack)
+        {     
+            _animator.SetBool("IsAttack", canAttack); 
+        }
     }
 }
