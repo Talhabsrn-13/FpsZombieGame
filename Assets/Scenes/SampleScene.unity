@@ -1465,6 +1465,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2397947727393830024, guid: 68b4ae9fa2a6faa499f91ba01aa6b392, type: 3}
   m_PrefabInstance: {fileID: 1149320907}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1991903073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6027394692893697734, guid: 11366d2050515e348865ea5fc1707817, type: 3}
+  m_PrefabInstance: {fileID: 1191271755135293760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d15747f81131224fa5f5fb4c6fb1cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &750686895911963340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1937329148738671500, guid: 11366d2050515e348865ea5fc1707817, type: 3}
@@ -1529,6 +1540,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1937329148738671501, guid: 11366d2050515e348865ea5fc1707817, type: 3}
+      propertyPath: _currentWeaponController
+      value: 
+      objectReference: {fileID: 1991903073}
     - target: {fileID: 1937329148738671539, guid: 11366d2050515e348865ea5fc1707817, type: 3}
       propertyPath: m_Name
       value: Player
