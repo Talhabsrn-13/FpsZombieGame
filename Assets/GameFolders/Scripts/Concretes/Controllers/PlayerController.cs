@@ -15,9 +15,10 @@ namespace Project3.Controllers
         [SerializeField] float _moveSpeed;
         [SerializeField] float _turnSpeed;
         [SerializeField] Transform _turnTransform;
-        [SerializeField] WeaponController _currentWeaponController;
+
         CharacterAnimation _animation;
-       
+        InventoryController _inventory;
+
         IInputReader _input;
         IMover _mover;
         IRotator _xRotator;
@@ -34,6 +35,7 @@ namespace Project3.Controllers
             _animation = new CharacterAnimation(this);
             _xRotator = new RotatorX(this);
             _yRotator = new RotatorY(this);
+            _inventory = GetComponent<InventoryController>();
         }
         private void Update()
         {
@@ -41,11 +43,17 @@ namespace Project3.Controllers
             _rotation = _input.Rotation;
             _xRotator.RotationAction(_rotation.x, _turnSpeed);
             _yRotator.RotationAction(_rotation.y, _turnSpeed);
+            
             if (_input.IsAttackButtonPress)
             {
-                _currentWeaponController.Attack();
+                _inventory.CurrentWeapon.Attack();
             }
-           
+
+            if (_input.IsInventoryButtonPressed)
+            {
+                _inventory.ChangeWeapon();
+            }
+
         }
         private void FixedUpdate()
         {

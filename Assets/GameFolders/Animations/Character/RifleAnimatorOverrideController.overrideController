@@ -6,12 +6,12 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SwordAnimatorOverrideController
+  m_Name: RifleAnimatorOverrideController
   m_Controller: {fileID: 9100000, guid: 76c69a95c734f5c4ea78d2f0aae32b70, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: -203655887218126122, guid: 7c2c538c91e71b04f9158578b75787da, type: 3}
-    m_OverrideClip: {fileID: -203655887218126122, guid: c7a9af2928c763f40bcf16a76db2b3dd, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 7c2c538c91e71b04f9158578b75787da, type: 3}
   - m_OriginalClip: {fileID: -203655887218126122, guid: a36cd95cb90913d45bb79605a98f11de, type: 3}
-    m_OverrideClip: {fileID: -203655887218126122, guid: 117374622b92b604abc802d4554714d7, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: a36cd95cb90913d45bb79605a98f11de, type: 3}
   - m_OriginalClip: {fileID: -203655887218126122, guid: 3bca79f78c5806f4ba3d32fe5145a578, type: 3}
-    m_OverrideClip: {fileID: -203655887218126122, guid: 2a4d2777cfc508c4ab1fea89866866eb, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 3bca79f78c5806f4ba3d32fe5145a578, type: 3}

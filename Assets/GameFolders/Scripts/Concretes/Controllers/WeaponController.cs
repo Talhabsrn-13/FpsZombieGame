@@ -16,8 +16,8 @@ namespace Project3.Controllers
       
         IAttackType _attackType;
 
-      
-     
+        public AttackSO AttackSO => _attackSO;
+
         float _currentTime;
 
         private void Awake()
