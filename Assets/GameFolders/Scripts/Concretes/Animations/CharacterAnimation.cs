@@ -24,7 +24,7 @@ namespace Project3.Animations
 
         public void AttackAnimation(bool canAttack)
         {     
-            _animator.SetBool("IsAttack", canAttack); 
+            _animator.SetBool("isAttack", canAttack); 
         }
     }
 }
