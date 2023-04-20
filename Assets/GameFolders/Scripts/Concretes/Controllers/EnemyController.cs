@@ -16,7 +16,7 @@ namespace Project3.Controllers
     {
         [SerializeField] Transform _playerPrefab;
        
-        IMover _mover;
+
         IHealth _health;
       
         CharacterAnimation _animation;
@@ -26,12 +26,13 @@ namespace Project3.Controllers
         Transform _playerTransform;
      
         bool _canAttack;
+        public IMover Mover { get; private set; }
 
         public bool CanAttack => Vector3.Distance(_playerTransform.position, this.transform.position)
             <= _navMeshAgent.stoppingDistance && _navMeshAgent.velocity == Vector3.zero;
         private void Awake()
         {
-            _mover = new MoveWithNavMesh(this);
+            Mover = new MoveWithNavMesh(this);
             _animation = new CharacterAnimation(this);
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _health = GetComponent<IHealth>();
@@ -42,7 +43,7 @@ namespace Project3.Controllers
         {
             _playerTransform = FindObjectOfType<PlayerController>().transform;
             AttackState attackState = new AttackState();
-            ChaseState chaseState = new ChaseState();
+            ChaseState chaseState = new ChaseState(this, _playerTransform);
             DeadState deadState = new DeadState();
 
             _stateMachine.AddState(chaseState,attackState, () => CanAttack);
@@ -53,10 +54,8 @@ namespace Project3.Controllers
         }
         private void Update()
         {
-            if (_health.IsDead) return;
-        
-            _mover.MoveAction(_playerTransform.position, 10f);
-
+            if (_health.IsDead) return;        
+          
             _stateMachine.Tick();
         }
         private void FixedUpdate()
