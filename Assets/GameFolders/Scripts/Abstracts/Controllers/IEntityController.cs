@@ -5,10 +5,11 @@ using UnityEngine;
 
 namespace Project3.Abstract.Controller
 {
-    public interface IEntityController
+    public interface IEntityContoller
     {
         public Transform transform { get; }
-        IMover Mover { get; }
+
+        
     }
 
 }

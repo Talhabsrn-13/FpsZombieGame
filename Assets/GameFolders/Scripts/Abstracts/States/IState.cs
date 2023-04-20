@@ -6,5 +6,7 @@ namespace Project3.Abstract.States
         void Tick();
         void OnExit();
         void OnEnter();
+        void TickFixed();
+        void TickLate();
     }
 }

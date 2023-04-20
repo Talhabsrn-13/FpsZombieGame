@@ -9,7 +9,7 @@ namespace Project3.Movements
     public class MoveWithNavMesh :MonoBehaviour, IMover
     {
         NavMeshAgent _navMeshAgent;
-        public MoveWithNavMesh(IEntityController entityController)
+        public MoveWithNavMesh(IEntityContoller entityController)
         {
             _navMeshAgent = entityController.transform.GetComponent<NavMeshAgent>();
         }

@@ -10,7 +10,7 @@ namespace Project3.Movements
     public class MoveWithCharacterController : IMover
     {
         CharacterController _characterController;
-        public MoveWithCharacterController(IEntityController entityController)
+        public MoveWithCharacterController(IEntityContoller entityController)
         {
             _characterController = entityController.transform.GetComponent<CharacterController>();
         }

@@ -18,5 +18,15 @@ namespace Project3.States.EnemyStates
         {
             Debug.Log("DeadState");
         }
+
+        public void TickFixed()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void TickLate()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

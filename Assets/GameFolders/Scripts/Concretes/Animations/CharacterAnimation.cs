@@ -10,7 +10,7 @@ namespace Project3.Animations
     {
         Animator _animator;
 
-        public CharacterAnimation(IEntityController entity)
+        public CharacterAnimation(IEntityContoller entity)
         {
             _animator = entity.transform.GetComponentInChildren<Animator>();
         }

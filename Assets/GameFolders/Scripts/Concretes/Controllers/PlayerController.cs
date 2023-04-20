@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Project3.Controllers
 {
-    public class PlayerController : MonoBehaviour, IEntityController
+    public class PlayerController : MonoBehaviour, IEntityContoller
     {
         [Header("Movement Informations")]
         [SerializeField] float _moveSpeed;
@@ -20,7 +20,7 @@ namespace Project3.Controllers
         InventoryController _inventory;
 
         IInputReader _input;
-
+        IMover _mover;
         IRotator _xRotator;
         IRotator _yRotator;
 
@@ -28,11 +28,10 @@ namespace Project3.Controllers
         Vector2 _rotation;
 
         public Transform TurnTransform => _turnTransform;
-        public IMover Mover { get; private set; }
         private void Awake()
         {
             _input = GetComponent<IInputReader>();
-            Mover = new MoveWithCharacterController(this);
+            _mover = new MoveWithCharacterController(this);
             _animation = new CharacterAnimation(this);
             _xRotator = new RotatorX(this);
             _yRotator = new RotatorY(this);
@@ -44,7 +43,7 @@ namespace Project3.Controllers
             _rotation = _input.Rotation;
             _xRotator.RotationAction(_rotation.x, _turnSpeed);
             _yRotator.RotationAction(_rotation.y, _turnSpeed);
-
+            
             if (_input.IsAttackButtonPress)
             {
                 _inventory.CurrentWeapon.Attack();
@@ -58,7 +57,7 @@ namespace Project3.Controllers
         }
         private void FixedUpdate()
         {
-            Mover.MoveAction(_direction, _moveSpeed);
+            _mover.MoveAction(_direction, _moveSpeed);
         }
         void LateUpdate()
         {
