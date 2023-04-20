@@ -23,7 +23,9 @@ namespace Project3.States.EnemyStates
 
         public void Tick()
         {
-          //TODO Look At Target
+            //TODO Look At Target
+            _enemyController.transform.LookAt(_enemyController.Target);
+            _enemyController.transform.eulerAngles = new Vector3(0f, _enemyController.transform.eulerAngles.y, 0f);
         }
 
         public void TickFixed()

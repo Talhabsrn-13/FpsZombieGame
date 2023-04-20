@@ -2,6 +2,7 @@ using Project3.Abstract.Combats;
 using Project3.Abstract.Controller;
 using Project3.Abstract.Movements;
 using Project3.Animations;
+using Project3.Combats;
 using Project3.Movements;
 using Project3.States;
 using Project3.States.EnemyStates;
@@ -33,6 +34,8 @@ namespace Project3.Controllers
         public Transform Target { get; set; }
         public float Magnitude => _navMeshAgent.velocity.magnitude;
 
+        public Dead Dead { get; private set; }
+
         private void Awake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -42,13 +45,14 @@ namespace Project3.Controllers
             Mover = new MoveWithNavMesh(this);
             Animation = new CharacterAnimation(this);
             Inventory = GetComponent<InventoryController>();
+            Dead = GetComponent<Dead>();
         }
         private void Start()
         {
             Target = FindObjectOfType<PlayerController>().transform;
             AttackState attackState = new AttackState(this);
             ChaseState chaseState = new ChaseState(this);
-            DeadState deadState = new DeadState();
+            DeadState deadState = new DeadState(this);
 
             _stateMachine.AddState(chaseState, attackState, () => CanAttack);
             _stateMachine.AddState(attackState, chaseState, () => !CanAttack);

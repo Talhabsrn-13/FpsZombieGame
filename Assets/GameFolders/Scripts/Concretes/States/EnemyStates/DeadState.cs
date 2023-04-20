@@ -1,12 +1,23 @@
+using Project3.Abstract.Controller;
 using Project3.Abstract.States;
 using UnityEngine;
 namespace Project3.States.EnemyStates
 {
     public class DeadState : IState
     {
+        IEnemyController _enemyController;
+        float _currentTime =0;
+        float _maxtTime = 5f;
+        public DeadState(IEnemyController enemyController)
+        {
+            _enemyController = enemyController;
+        }
         public void OnEnter()
         {
             Debug.Log($"{nameof(DeadState)}{nameof(OnEnter)}");
+            _enemyController.Dead.DeadAction();
+            _enemyController.Animation.DeadAnimation();
+            _enemyController.transform.GetComponent<CapsuleCollider>().enabled = false;
         }
 
         public void OnExit()
@@ -16,17 +27,17 @@ namespace Project3.States.EnemyStates
 
         public void Tick()
         {
-            Debug.Log("DeadState");
+            return;
         }
 
         public void TickFixed()
         {
-            throw new System.NotImplementedException();
+            return;
         }
 
         public void TickLate()
         {
-            throw new System.NotImplementedException();
+            return;   
         }
     }
 }

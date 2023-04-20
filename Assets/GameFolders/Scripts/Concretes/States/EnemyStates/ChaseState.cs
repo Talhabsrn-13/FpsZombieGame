@@ -20,6 +20,7 @@ namespace Project3.States.EnemyStates
         public void OnExit()
         {
             Debug.Log($"{nameof(ChaseState)}{nameof(OnExit)}");
+            _enemyController.Mover.MoveAction(_enemyController.transform.position, 0f);
         }
 
         public void Tick()
@@ -28,7 +29,7 @@ namespace Project3.States.EnemyStates
         }
 
         public void TickFixed()
-        {
+        {   
         }
         public void TickLate()
         {
