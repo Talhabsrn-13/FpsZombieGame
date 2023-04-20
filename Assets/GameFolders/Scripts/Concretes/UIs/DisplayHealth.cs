@@ -21,13 +21,7 @@ namespace Project3.UIs
             health.OnTakeHit += HandleTakeHit;
         }
 
-     
-
-        private void OnDisable()
-        {
-            Health health = GetComponentInParent<Health>();
-            health.OnTakeHit -= HandleTakeHit;
-        }
+        
         private void HandleTakeHit(int currentHealth, int maxHealth)
         {
             _healthImage.fillAmount = Convert.ToSingle(currentHealth) / Convert.ToSingle(maxHealth);

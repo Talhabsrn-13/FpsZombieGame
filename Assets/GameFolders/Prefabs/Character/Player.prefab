@@ -650,6 +650,7 @@ GameObject:
   - component: {fileID: 1191271756514240657}
   - component: {fileID: 1191271756514240671}
   - component: {fileID: 1191271756514240670}
+  - component: {fileID: 595384284}
   m_Layer: 5
   m_Name: CurrentHealth
   m_TagString: Untagged
@@ -714,6 +715,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &595384284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191271756514240656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e958635ec9d69bd4aa473dcf0e567424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1191271756673006978
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +811,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1937329148738671500}
-  - component: {fileID: 1937329148738671503}
   - component: {fileID: 1937329148738671502}
   - component: {fileID: 1937329148738671501}
   - component: {fileID: 1937329148738671496}
@@ -831,20 +843,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1937329148738671503
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937329148738671539}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.38
-  m_Height: 1.810858
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.97806823, z: 0}
 --- !u!143 &1937329148738671502
 CharacterController:
   m_ObjectHideFlags: 0
