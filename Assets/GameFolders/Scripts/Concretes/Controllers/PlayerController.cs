@@ -1,3 +1,4 @@
+using Project3.Abstract.Combats;
 using Project3.Abstract.Controller;
 using Project3.Abstract.Inputs;
 using Project3.Abstract.Movements;
@@ -23,6 +24,7 @@ namespace Project3.Controllers
         IMover _mover;
         IRotator _xRotator;
         IRotator _yRotator;
+        IHealth _health;
 
         Vector3 _direction;
         Vector2 _rotation;
@@ -36,11 +38,23 @@ namespace Project3.Controllers
             _xRotator = new RotatorX(this);
             _yRotator = new RotatorY(this);
             _inventory = GetComponent<InventoryController>();
+            _health = GetComponent<IHealth>();
+        }
+        private void OnEnable()
+        {
+            _health.OnDead +=()=> _animation.DeadAnimation("dead");
+        }
+        private void OnDisable()
+        {
+            _health.OnDead -= () => _animation.DeadAnimation("dead");
         }
         private void Update()
         {
+            if (_health.IsDead) return;
+
             _direction = _input.Direction;
             _rotation = _input.Rotation;
+
             _xRotator.RotationAction(_rotation.x, _turnSpeed);
             _yRotator.RotationAction(_rotation.y, _turnSpeed);
             
@@ -57,10 +71,12 @@ namespace Project3.Controllers
         }
         private void FixedUpdate()
         {
+            if (_health.IsDead) return;
             _mover.MoveAction(_direction, _moveSpeed);
         }
         void LateUpdate()
         {
+            if (_health.IsDead) return;
             _animation.MoveAnimation(_direction.magnitude);
             _animation.AttackAnimation(_input.IsAttackButtonPress);
         }

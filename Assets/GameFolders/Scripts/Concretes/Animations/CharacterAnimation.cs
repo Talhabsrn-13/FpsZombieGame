@@ -26,9 +26,9 @@ namespace Project3.Animations
         {     
             _animator.SetBool("isAttack", canAttack); 
         }
-        public void DeadAnimation()
+        public void DeadAnimation(string name)
         {
-            _animator.SetTrigger("death");
+            _animator.SetTrigger(name);
         }
     }
 }
