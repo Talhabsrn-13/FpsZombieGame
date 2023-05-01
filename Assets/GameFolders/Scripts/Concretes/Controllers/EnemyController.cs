@@ -3,6 +3,7 @@ using Project3.Abstract.Controller;
 using Project3.Abstract.Movements;
 using Project3.Animations;
 using Project3.Combats;
+using Project3.Managers;
 using Project3.Movements;
 using Project3.States;
 using Project3.States.EnemyStates;
@@ -71,6 +72,11 @@ namespace Project3.Controllers
         void LateUpdate()
         {
             _stateMachine.TickLate();
+        }
+
+        private void OnDestroy()
+        {
+            EnemyManager.Instance.RemoveEnemyController(this);
         }
     }
 }

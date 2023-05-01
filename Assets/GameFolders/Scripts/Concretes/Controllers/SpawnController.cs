@@ -1,3 +1,4 @@
+using Project3.Managers;
 using Project3.ScriptableObjects;
 using System;
 using System.Collections;
@@ -22,7 +23,7 @@ namespace Project3.Controllers
         {
             _currentSpawntime += Time.deltaTime;
 
-            if (_currentSpawntime > _maxSpawnTime)
+            if (_currentSpawntime > _maxSpawnTime && EnemyManager.Instance.CanSpawn)
             {
                 Spawn();
             }
@@ -30,7 +31,9 @@ namespace Project3.Controllers
 
         private void Spawn()
         {
-            EnemyController newEnemy = Instantiate(_spawnInfo.EnemyPrefab, transform.position, Quaternion.identity);
+            EnemyController enemyController = Instantiate(_spawnInfo.EnemyPrefab, transform.position, Quaternion.identity);
+            EnemyManager.Instance.AddEnemyController(enemyController);
+
             _currentSpawntime = 0f;
             _maxSpawnTime = _spawnInfo.GetRandomMaxSpawnTime;
         }
